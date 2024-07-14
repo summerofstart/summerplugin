@@ -1,0 +1,61 @@
+# AsyncPluginWrapper 設定ファイル
+
+# 非同期化対象プラグイン
+# '*' を指定すると全てのプラグインが対象になります
+# 特定のプラグインを指定する場合は、プラグイン名のリストを記述してください
+非同期化対象プラグイン:
+- '*'
+
+# 非同期化から除外するプラグイン
+# ここにリストされたプラグインは、非同期化されません
+除外プラグイン:
+- EssentialsX
+- WorldEdit
+
+# 非同期化から除外するイベント
+# ここにリストされたイベントは、非同期化されません
+除外イベント:
+- InventoryOpenEvent
+- ChunkLoadEvent
+- WorldUnloadEvent
+- PluginEnableEvent
+- EntityExplodeEvent
+- PlayerInteractEvent
+- PlayerKickEvent
+- WorldLoadEvent
+- Result
+- PlayerDropItemEvent
+- ChunkUnloadEvent
+- PluginDisableEvent
+- ServerListPingEvent
+- EntityDamageEvent
+- BlockPlaceEvent
+- BlockPhysicsEvent
+- EntityDeathEvent
+- PlayerQuitEvent
+- PlayerMoveEvent
+- ServerCommandEvent
+- BlockFromToEvent
+- PlayerJoinEvent
+- InventoryClickEvent
+- PlayerCommandPreprocessEvent
+- InventoryCloseEvent
+- BlockBreakEvent
+- PlayerPickupItemEvent
+- AsyncPlayerChatEvent
+- EntitySpawnEvent
+- WorldSaveEvent
+
+# 詳細設定
+詳細設定:
+  # ログレベル: INFO, WARNING, DEBUG のいずれかを指定
+  ログレベル: INFO
+  
+  # タイムアウト (ミリ秒)
+  # 指定した時間を超えて処理が続いた場合、警告ログが出力されます
+  タイムアウト: 3000
+  
+  # スレッドプールサイズ
+  # 同時に実行可能な非同期タスクの最大数を指定します
+  # サーバーのCPUコア数に応じて適切な値を設定してください
+  スレッドプールサイズ: 4
